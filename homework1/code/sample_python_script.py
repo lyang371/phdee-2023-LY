@@ -22,7 +22,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import statsmodels.api as sm
 from pathlib import Path
-pip install seaborn==0.11.0
+
 
 # Set working directories and seed
 
