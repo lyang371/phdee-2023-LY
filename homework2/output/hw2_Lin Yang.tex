@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[letterpaper, portrait, margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=blue,
+    citecolor=black,
+}
+\usepackage{natbib}
+
+\usepackage{titlesec}
+  
+\title{Homework 2}
+\author{Lin Yang}
+\date{\today}
+  
+\begin{document}
+  
+\maketitle
+\section{Python}
+
+\subsection{Check for balance between treatment and control group.}
+
+\begin{table}[ht]
+	\centering
+	\input{q1table.tex}
+	\caption{Summary Statistics by control and treatment group}
+\end{table}
+The characteristics of Sqft and Temp are good measures for the households since the p-values of the two variables in the t-test is large, which means that the average Sqft and Temp among two groups are similar. \\ And the p-value of Electricity is less than 1\%, which means there is significant difference in Electricity use between two groups and the randomized experiment succeeded in creating the desired variation.
+	
+\subsection{Kernel Density Plots}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale = 0.5]{q2.pdf}
+	\caption{Kernel density plots of electricity use by control and treatment group}
+\end{figure}
+
+
+\subsection{Estimation}
+
+\textbf{(a) OLS by hand}
+\begin{table}[ht]
+	\centering
+	\input{q1_3table.tex}
+	\caption{Coefficients from calculating OLS by hand }
+\end{table}
+
+\textbf{(b) OLS by simulated least squares}
+\begin{table}[ht]
+	\centering
+	\input{q1_3_2table.tex}
+	\caption{Coefficients from simulated least squares}
+\end{table}
+
+
+\textbf{(c) OLS using a canned routine}
+\begin{table}[ht]
+	\centering
+	\input{q1_3_3table.tex}
+	\caption{Coefficients from using a canned routine}
+\end{table}
+
+
+\section{Stata}
+
+\subsection{Check for balance between treatment and control group.}
+
+\begin{table}[H]
+	\centering
+	\input{summarystats.tex}
+	\caption{Summary Statistics by control and treatment group}
+\end{table}
+
+
+\subsection{Scatter Plot with electricity consumption vs sqft}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale = 0.7]{scatterplot.pdf}
+	\caption{Scatter plot of electricity consumption versus square feet}
+	\label{fig:scatterplot}
+\end{figure}
+
+
+
+\subsection{Regression Results}
+\begin{table}[H]
+\centering
+	\input{sampleoutput_stata.tex}
+	\caption{Regression results table with heteroskedasticity standard errors}
+\end{table}
+
+
+
+
+
+\end{document}
+

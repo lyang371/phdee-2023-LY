@@ -22,11 +22,34 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import statsmodels.api as sm
 from pathlib import Path
-
+import statistics
+from scipy import stats
 
 # Set working directories and seed
+kwh = pd.read_csv("/Users/apple/Dropbox (GaTech)/phdee-2023-LY/homework2/code/kwh.csv")
+outputpath = Path("/Users/apple/Dropbox (GaTech)/phdee-2023-LY/homework2/output")
+kwh
 
-outputpath = Path("/Users/apple/Dropbox (GaTech)/phdee-2023-LY/homework1/output")
+#1. 4-columns table 
+control = kwh[kwh['retrofit'] == 0.0]
+treatment = kwh[kwh['retrofit'] == 1.0]
+
+print(control['electricity'].mean())
+print(treatment['electricity'].mean())
+
+print(control['electricity'].std())
+print(treatment['electricity'].std())
+
+stats.ttest_ind(control['electricity'], treatment['electricity'])
+
+## Set the row and column names
+rownames = pd.concat([pd.Series(['Electricity','Sqft', 'Temp']),pd.Series([' ',' ',' '])],axis = 1).stack() # Note this stacks an empty list to make room for stdevs
+colnames = [('Control Mean','(s.d.)')] # Two rows of column names
+
+## Format means and std devs to display to two decimal places
+means = means.map('{:.2f}'.format)
+stdev = stdev.map('({:.2f})'.format)
+
 # Normally I will also have a datapath where I store the original data if I am working on a small enough csv file.
 
 np.random.seed(6578103)
@@ -43,7 +66,7 @@ yvar = np.matmul(truexvars,truebetas)
 # Define what independent variables we observe -------------------------------
 xvars = truexvars[:,0:2] # The last column of xvars is not observed
 data = pd.DataFrame(np.concatenate([yvar,xvars], axis = 1),columns = ['Outcome','X1','X2']) # Convert to a pandas data frame for demonstration
-
+data
 # Generate a table of means and standard deviations for the observed variables (there are faster ways to do this that are less general)
 ## Generate means
 means = data.mean()
