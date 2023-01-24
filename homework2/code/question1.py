@@ -7,9 +7,6 @@ Created on Thu Jan 12 11:54:42 2023
 @author: apple
 """
 
-# Sample code to get you started -- Dylan Brewer
-
-# Clear all
 
 from IPython import get_ipython
 import scipy
