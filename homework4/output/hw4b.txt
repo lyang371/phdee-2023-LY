@@ -1,0 +1,62 @@
+		(1)
+VARIABLES	LABELS	Model (b)
+		
+dmonth1	dmonth1	-603.83
+		(1,234.23)
+dmonth2	dmonth2	-413.69
+		(1,133.86)
+dmonth3	dmonth3	-418.36
+		(1,055.76)
+dmonth4	dmonth4	-166.18
+		(904.86)
+dmonth5	dmonth5	116.58
+		(785.09)
+dmonth6	dmonth6	202.74
+		(620.91)
+dmonth7	dmonth7	516.12
+		(604.44)
+dmonth8	dmonth8	712.85
+		(404.67)
+dmonth9	dmonth9	824.44*
+		(397.46)
+dmonth10	dmonth10	347.27
+		(399.25)
+dmonth11	dmonth11	355.11
+		(295.49)
+dmonth12	dmonth12	4,359.95**
+		(1,461.19)
+dmonth14	dmonth14	-126.14
+		(308.52)
+dmonth15	dmonth15	-156.13
+		(309.51)
+dmonth16	dmonth16	-162.29
+		(433.49)
+dmonth17	dmonth17	-321.59
+		(339.14)
+dmonth18	dmonth18	219.88
+		(442.62)
+dmonth19	dmonth19	123.36
+		(487.72)
+dmonth20	dmonth20	154.57
+		(580.55)
+dmonth21	dmonth21	244.52
+		(667.00)
+dmonth22	dmonth22	104.53
+		(884.10)
+dmonth23	dmonth23	24.59
+		(902.57)
+dmonth24	dmonth24	-46.11
+		(792.05)
+dmeaninteraction	dmeaninteraction	-7,451.29**
+		(2,355.04)
+dmeanshrimp	dmeanshrimp	1.56**
+		(0.18)
+dmeansalmon	dmeansalmon	-0.68
+		(1.11)
+Constant	Constant	-0.00
+		(0.00)
+		
+Observations		1,200
+R-squared		0.41
+Robust standard errors in parentheses		
+** p<0.01, * p<0.05		

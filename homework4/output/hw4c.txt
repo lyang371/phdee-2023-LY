@@ -1,0 +1,22 @@
+		(1)	(2)
+VARIABLES	LABELS	Model (a)	Model (b)
+			
+interaction	interaction	-7,810.58**	
+		(2,574.15)	
+shrimp	shrimp	1.06**	
+		(0.05)	
+salmon	salmon	0.60**	
+		(0.21)	
+dmeaninteraction	dmeaninteraction		-7,451.29**
+			(2,355.04)
+dmeanshrimp	dmeanshrimp		1.56**
+			(0.18)
+dmeansalmon	dmeansalmon		-0.68
+			(1.11)
+Constant	Constant	1,075.16	-0.00
+		(1,100.77)	(0.00)
+			
+Observations		1,200	1,200
+R-squared		0.99	0.41
+Robust standard errors in parentheses			
+** p<0.01, * p<0.05			

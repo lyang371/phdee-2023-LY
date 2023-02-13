@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[letterpaper, portrait, margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=blue,
+    citecolor=black,
+}
+\usepackage{natbib}
+
+\usepackage{titlesec}
+  
+\title{Homework 4}
+\author{Lin Yang}
+\date{\today}
+  
+\begin{document}
+\maketitle  
+\section{Python}
+~\\
+1. Visually inspect the bycatch by month before and after treatment for treated and control groups by creating a line plot for months in 2017 and 2018. 
+\begin{figure}[ht]
+\centering
+	\includegraphics[scale = 0.9]{hw4a.pdf}
+    \caption{Monthly amount of bycatch treated group versus control group}
+\end{figure}
+
+There exists parallel trend before treatment among treated and control group. 
+
+~\\
+2. By following the formula to calculate, the after/before difference of average amount of bycatch for the treatment group is 9591.35 less than the after/before difference for the control group. 
+
+~\\
+3.(a) By using the regression-based two-period estimation method, I got the same treatment effects: -9591.35 with the result from question 2. The estimation result is shown in table1 below.
+\begin{table}[H]
+	\centering
+	\input{3a.tex}	
+	\caption{Coefficients and standard errors using Dec 2017 and Jan 2018}
+\end{table}
+
+~\\(b) The treatment effect change to -8956.78. And there is a clear difference for the month-indicator variables such that the coefficients for the months before Jan 2018 are negative, and the coefficients for the months after Jan 2018 are positive. The whole estimation results are shown in table 2 (page 4). 
+\begin{table}[ht]
+	\centering
+	\input{3b.tex}	
+	\caption{Coefficients and standard errors using full sample}
+\end{table}
+
+
+~\\(c) After adding firm size, pounds of salmon and shrimp, the treatment effect changes to -8436.28 and the scale of negative bycatch amounts of treatment group becomes smaller and the possible reason is that the treatment effect is offset by the negative effect from firm size, which has coefficient of  -2119.71. The whole estimation results are shown in table 3 (page 5).
+
+\begin{table}[ht]
+	
+	\small
+	\centering
+	\input{3c.tex}	
+	\caption{Coefficients and standard errors using full sample and adding covariates}
+
+\end{table}
+
+
+~\\(d)A single table including the treatment effects from (a), (b) and (c) is shown below. The treatment effects become smaller as we start to add more observations (change from -9591.35 to -8956.78) and add control variables (change from -8956.78 to -8436.28). 
+
+\begin{table}[H]
+	\centering
+	\input{3d.tex}	
+	\caption{Coefficients and standard errors using full sample}
+\end{table}
+
+\section{Stata}
+~\\1.(a) After generating indicator variables for each firm, the treatment effects is -7,810.58. The whole estimation results are shown in table 5 (page 6).  
+\begin{table}[ht]
+	\small
+	\centering
+	\input{hw4a.tex}	
+	\caption{Coefficients and standard errors including indicator variables for each firm}
+	
+\end{table}
+
+
+
+~\\(b) After performing "within-transformation", the treatment effect now becomes to -7,451.29. The whole estimation results are shown in table 6 (page 7).  
+\begin{table}[ht]
+	\small
+	\centering
+	\input{hw4b.tex}	
+	\caption{Within-transformation Model Estimation Results}
+	
+\end{table}
+
+
+
+~\\(c) The result of treatment effect from model (b) is smaller than the result from model (a).
+	
+	 Compared to the previous estimation results run by python, the scale of negative effects become smaller and the possible reason is that we do not include the treatment group indicator variable $g(i)$. 
+\begin{table}[H]
+	\centering
+	\input{hw4c.tex}	
+	\caption{Estimation Results for model (a) and model (b)}
+	
+\end{table}
+
+
+\end{document}
+

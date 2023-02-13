@@ -1,0 +1,64 @@
+		(1)
+VARIABLES	LABELS	Model (a)
+		
+month1	month1	461.76
+		(340.89)
+month2	month2	477.58
+		(343.13)
+month3	month3	446.25
+		(315.04)
+month4	month4	450.42
+		(293.21)
+month5	month5	457.61
+		(293.46)
+month6	month6	405.59
+		(250.64)
+month7	month7	443.50
+		(260.40)
+month8	month8	405.70
+		(228.93)
+month9	month9	402.40
+		(232.57)
+month10	month10	360.73
+		(215.22)
+month11	month11	321.34
+		(203.65)
+month12	month12	4,534.79**
+		(1,622.24)
+month14	month14	-66.02
+		(63.54)
+month15	month15	-36.10
+		(78.59)
+month16	month16	-128.76
+		(87.18)
+month17	month17	-143.19
+		(116.42)
+month18	month18	-64.99
+		(118.03)
+month19	month19	-148.90
+		(146.12)
+month20	month20	-194.30
+		(175.27)
+month21	month21	-163.02
+		(187.10)
+month22	month22	-255.38
+		(268.27)
+month23	month23	-327.82
+		(280.46)
+month24	month24	-287.03
+		(257.49)
+interaction	interaction	-7,810.58**
+		(2,574.15)
+firmsize	firmsize	-2,132.55
+		(3,406.26)
+shrimp	shrimp	1.06**
+		(0.05)
+salmon	salmon	0.60**
+		(0.21)
+Constant	Constant	1,075.16
+		(1,100.77)
+		
+Observations		1,200
+R-squared		0.99
+Robust standard errors in parentheses		
+** p<0.01, * p<0.05		

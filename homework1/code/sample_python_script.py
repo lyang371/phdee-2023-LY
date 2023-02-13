@@ -152,7 +152,7 @@ rownames = pd.concat([pd.Series(['Variable 1','Variable 2','Constant','Observati
 colnames = ['Estimates']
 
 ## Append CIs, # Observations, row and column names
-output = pd.DataFrame(output.stack().append(pd.Series(nobs3)))
+output = pd.DataFrame(output.stack(2).append(pd.Series(nobs3)))
 output.index = rownames
 output.columns = colnames
 
