@@ -229,9 +229,9 @@ os.chdir(outputpath) # Output directly to LaTeX folder
 colc.to_latex('3c.tex') 
 
 #(d)report the results into a single table
-a = cola.iloc[[0,1,6,7,8]]
-b = colb.iloc[[0,1,4,5,52]]
-c = colc.iloc[[0,1,10,11,58]]
+a = cola.iloc[[0,1,4,5,6,7,8]]
+b = colb.iloc[[0,1,2,3,4,5,52]]
+c = colc.iloc[[0,1,2,3,10,11,58]]
 
 result = pd.concat([a,b,c],axis =1)
 result = pd.DataFrame(result)
