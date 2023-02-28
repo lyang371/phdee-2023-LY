@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[letterpaper, portrait, margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=blue,
+    citecolor=black,
+}
+\usepackage{natbib}
+
+\usepackage{titlesec}
+  
+\title{Homework 6}
+\author{Lin Yang}
+\date{\today}
+  
+\begin{document}
+\maketitle  
+\section{Python}
+~\\
+1. Since every vehicle equipped with the technology is significantly less fuel-efficient, I believe it is sharp RD. 
+
+~\\
+2. There is obvious evidence of two bunching around the cutoff length = 225. So visual evidence of discontinuity may exist. 
+
+\begin{figure}[ht]
+\centering
+ \includegraphics[scale = 0.9]{q2.pdf}
+ \caption{Scatter plot of impact of the policy on fuel efficiency}
+ 
+ \end{figure}
+ 
+
+~\\
+3. Fit a first-polynomial to both sides of the cut off in a regression discontinuity design. 
+\begin{figure}[H]
+\centering
+ \includegraphics[scale = 0.9]{q3.pdf}
+ \caption{Scatter plot of impact of the policy on fuel efficiency and fitted first polynommial}
+ 
+ \end{figure}
+The first-stage treatment effect is 0.0111, which is obtained by differencing the estimate (-0.0278) using the points above the cutoff and the estimate (-0.0389) using the points below cutoff and means the mpg for the length above 225 cars is 0.0111 higher than the cars with length less than 225.
+
+~\\
+4. Fit a second-polynomial to both sides of the cut off in a regression discontinuity design. 
+
+\begin{figure}[H]
+\centering
+ \includegraphics[scale = 0.9]{q4.pdf}
+ \caption{Scatter plot of impact of the policy on fuel efficiency and fitted second polynomial}
+ 
+ \end{figure}
+ 
+ The treatment effect estimate is shown in the table below. 
+ \begin{table}[H]
+ \centering
+ \input{q4.tex}
+ 	
+ \end{table}
+
+
+~\\
+5. Fit a fifth-polynomial to both sides of the cut off in a regression discontinuity design. 
+\begin{figure}[H]
+\centering
+ \includegraphics[scale = 0.9]{q5.pdf}
+ \caption{Scatter plot of impact of the policy on fuel efficiency and fitted fifth polynomial}
+ 
+ \end{figure}
+
+
+ The treatment effect estimate is shown in the table below. 
+ \begin{table}[H]
+ \centering
+ \input{q5.tex}
+ 	
+ \end{table}
+~\\
+6. Using the discontinuity as an instrument for miles per gallon, estimate the impact of mpg on the vehicle's sale price using 2sls by hand. 
+Results from the second stage is shown in table below. 
+\begin{table}[H]
+	\centering
+	\input{q6.tex}
+\end{table}
+
+\section{Stata}
+~\\
+1. (a) The average treatment effect of mpg on price is 135.41. 
+
+\begin{table}[H]
+	\centering
+	\input{Stata1.tex}
+\end{table}
+~\\
+
+(b) 
+\begin{figure}[H]
+\centering
+ \includegraphics[scale = 0.9]{stata1b.png}
+ \caption{Scatter plot of impact of the policy on fuel efficiency and fitted second polynomial}
+ 
+ \end{figure}
+ 
+ ~\\
+ 2. Yes. I think it is a valid instrument. 
+
+\end{document}

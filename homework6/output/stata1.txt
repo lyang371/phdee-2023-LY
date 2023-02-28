@@ -1,0 +1,14 @@
+		(1)
+VARIABLES	LABELS	Impact of Mpg on Price by using predicted length from RDD
+		
+rdplot_hat_y	rdplot_hat_y	135.41**
+		(22.98)
+car	car	-3,693.27**
+		(225.09)
+Constant	Constant	17,622.91**
+		(739.75)
+		
+Observations		1,000
+R-squared		0.22
+Robust standard errors in parentheses		
+** p<0.01, * p<0.05		
