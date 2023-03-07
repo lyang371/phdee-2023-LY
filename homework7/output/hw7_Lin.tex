@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage[letterpaper, portrait, margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=blue,
+    citecolor=black,
+}
+\usepackage{natbib}
+
+\usepackage{titlesec}
+  
+\title{Homework 7}
+\author{Lin Yang}
+\date{\today}
+  
+\begin{document}
+\maketitle  
+\section{Stata}
+~\\
+1. (a) 
+The coefficient estimate on \textit{treatment\_t} is -0.065 and the heteroskedasticity-robust standard error is 0.0014. 
+\\
+(b) The coefficient estimate on \textit{treatment\_t} is -0.070 and the heteroskedasticity-robust standard error is 0.0010. 
+\\
+(c) The possible issue is that although we consider characteristics of zones, day of week, month, hour of day, it may not give us a good match group since not consider year. 
+
+
+~\\
+2. (a) While adding an indicator for year of sample, the coefficient estimate on \textit{treatment\_t} changes to 0.025 and the heteroskedasticity-robust standard error becomes 0.0027.
+
+\\
+(b) This attempt addresses the shortcoming of not considering longer term variation such as yearly level and use year variable to match and get a better comparison group. 
+
+~\\
+3. (a) By using the nearest neighbour matching, the coefficient of estimating only on the 2020 data is 0.002 and the standard error is 0.0017. 
+
+~\\
+(b) The coefficient estimates from regressing the difference in the outcome variable on \textit{treatment\_t} might be strongly influenced by the standard error, so we might choose reasonable number of nearest neighbours rather than just set the number as 1. 
+
+\end{document}

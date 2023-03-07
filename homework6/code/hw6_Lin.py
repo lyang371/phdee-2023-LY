@@ -62,14 +62,16 @@ Y_below = instrument[instrument['policy']==0]['mpg']
 
 firstorderabove = sm.OLS(Y_above, X_above).fit()
 firstorderbelow = sm.OLS(Y_below, X_below).fit()
-firstorder = sm.OLS(instrument['mpg'],sm.add_constant(instrument['policy'])).fit()
-print(firstorder.summary())
 
 print(firstorderabove.summary())
 print(firstorderbelow.summary())
 
-coef = firstorderabove.params.to_numpy # save estimated parameters
-
+coef = firstorderabove.params.to_numpy() # save estimated parameters
+coef[1]
+coefb = firstorderbelow.params.to_numpy() # save estimated parameters
+coefb[1]
+te = coef[1]-coefb[1]
+te
 #Calculate the predicted values of mpg at different values of the running variable
 
 X_pred_below = np.linspace(X_below['length'].min(), X_below['length'].max(), 1000)
@@ -104,12 +106,26 @@ Y_below = instrument[instrument['policy'] == 0][['mpg']]
 X_2poly_above = sm.add_constant(np.column_stack((X_above, X_above**2)))
 X_2poly_below = sm.add_constant(np.column_stack((X_below, X_below**2)))
 
+
+X_2poly = sm.add_constant(np.column_stack((instrument['length'],instrument['length'] **2)))
+
 secondorder_above = sm.OLS(Y_above, X_2poly_above).fit()
 secondorder_below = sm.OLS(Y_below, X_2poly_below).fit()
+
+secondorder = sm.OLS(instrument['mpg'], X_2poly).fit()
+
+print(secondorder.summary())
+with open("q4.tex", "w") as f: f.write(secondorder.summary().as_latex())
+
 
 print(secondorder_above.summary())
 print(secondorder_below.summary())
 
+coef2 = secondorder_above.params.to_numpy() # save estimated parameters
+coef[1]
+coefb2 = firstorderbelow.params.to_numpy() # save estimated parameters
+coefb[1]
+te = coef[1]-coefb[1]
 import matplotlib.pyplot as plt
 
 # plot scatterplot of the data
@@ -142,6 +158,13 @@ fifthorder_below = sm.OLS(Y_below, X_5poly_below).fit()
 
 print(fifthorder_above.summary())
 print(fifthorder_below.summary())
+
+X_5poly = sm.add_constant(np.column_stack((instrument['length'],instrument['length'] **2, instrument['length']**3,instrument['length']**4,instrument['length']**5)))
+
+fifthorder = sm.OLS(instrument['mpg'], X_5poly).fit()
+print(fifthorder.summary())
+
+with open("q5.tex", "w") as f: f.write(fifthorder.summary().as_latex())
 
 import matplotlib.pyplot as plt
 
